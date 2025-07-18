@@ -1,0 +1,355 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #ffe6f7; /* Rosa claro de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+   }
+   
+   
+   .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinea las tarjetas verticalmente */
+    align-items: center; /* Centra las tarjetas horizontalmente */
+   }
+   
+   
+   .card {
+    background-color: #fff0f5; /* Blanco rosado para la tarjeta */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%; /* Ajustar ancho máximo para pantallas más grandes */
+    margin-bottom: 20px; /* Añade espacio entre las tarjetas */
+   }
+   
+   
+   .phrase {
+    color: #ff69b4; /* Rosa fuerte para la frase */
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.2s;
+   }
+
+   .phrase:hover {
+    transform: scale(1.1);
+   }
+
+   .card-title {
+    color: #ff69b4; /* Rosa fuerte para el título */
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+   }
+
+   .card-title:hover {
+    transform: scale(1.1);
+   }
+
+   .card-text {
+    color: #333; /* Gris oscuro para el texto largo */
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.6;
+    transition: transform 0.2s;
+   }
+
+   .card-text:hover {
+    transform: scale(1.05);
+   }
+
+   ul.card-text {
+    text-align: left;
+    padding-left: 40px; /* Adjust list indentation */
+   }
+   
+   
+   /* Media queries para hacer la página responsive */
+   @media (max-width: 768px) {
+    .card {
+    max-width: 90%;
+    padding: 15px;
+    }
+   
+    .phrase {
+    font-size: 1.3em;
+    }
+   
+    .card-title {
+    font-size: 1.5em;
+    }
+   
+    .card-text {
+    font-size: 1em;
+    }
+   
+    .corner-gif {
+    width: 100px; /* GIFs más pequeños en pantallas medianas */
+    }
+   
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .card {
+    max-width: 95%;
+    padding: 10px;
+    }
+   
+    .phrase {
+    font-size: 1em;
+    }
+   
+    .card-title {
+    font-size: 1.2em;
+    }
+   
+    .card-text {
+    font-size: 0.9em;
+    }
+   
+    .corner-gif {
+    width: 70px; /* GIFs aún más pequeños en pantallas pequeñas */
+    }
+   
+    .top-left,
+    .top-right,
+    .bottom-left,
+    .bottom-right {
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    }
+   }
+
+/* Estilos para la lista de música */
+.music-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.music-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333; /* Color de texto para el nombre de la canción */
+    font-size: 1.1em;
+}
+
+.play-button {
+    background-color: #ff69b4; /* Rosa fuerte para el botón */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #e0509b; /* Rosa más oscuro al pasar el ratón */
+}
+
+/* Media queries para la tarjeta de música */
+@media (max-width: 768px) {
+    .music-list li {
+        font-size: 1em;
+    }
+    .play-button {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .music-list li {
+        font-size: 0.9em;
+    }
+    .play-button {
+        padding: 3px 6px;
+        font-size: 0.7em;
+    }
+}
+
+/* =================== FIN ESTILOS DE LOS GIFS EN LAS ESQUINAS =================== */
+
+.corner-gif {
+  position: fixed;
+  width: 150px; /* Ancho mediano */
+  height: auto; /* Altura automática para mantener la proporción */
+  z-index: 999; /* Asegura que estén por encima de la mayoría de los elementos */
+  pointer-events: none; /* Evita que interfieran con los clics */
+}
+
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+/* Estilos para los gatos con helado */
+.top-left-cat {
+  position: fixed;
+  width: 150px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  top: 20px;
+  left: 180px; /* Al lado de la nutria superior izquierda */
+}
+
+.top-right-cat {
+  position: fixed;
+  width: 150px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  top: 20px;
+  right: 180px; /* Al lado de la nutria superior derecha */
+}
+
+.bottom-left-cat {
+  position: fixed;
+  width: 150px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  bottom: 20px;
+  left: 180px; /* Al lado de la nutria inferior izquierda */
+}
+
+.bottom-right-cat {
+  position: fixed;
+  width: 150px;
+  height: auto;
+  z-index: 999;
+  pointer-events: none;
+  bottom: 20px;
+  right: 180px; /* Al lado de la nutria inferior derecha */
+}
+
+/* Media queries para hacer la página responsive */
+@media (max-width: 768px) {
+    .corner-gif {
+        width: 100px;
+    }
+    .top-left {
+        top: 10px;
+        left: 10px;
+    }
+    .top-right {
+        top: 10px;
+        right: 10px;
+    }
+    .bottom-left {
+        bottom: 10px;
+        left: 10px;
+    }
+    .bottom-right {
+        bottom: 10px;
+        right: 10px;
+    }
+    .top-left-cat {
+        width: 100px;
+        top: 10px;
+        left: 70px;
+        right: auto;
+    }
+    .top-right-cat {
+        width: 100px;
+        top: 10px;
+        right: 70px;
+        left: auto;
+    }
+    .bottom-left-cat {
+        width: 100px;
+        bottom: 10px;
+        left: 70px;
+        right: auto;
+    }
+    .bottom-right-cat {
+        width: 100px;
+        bottom: 10px;
+        right: 70px;
+        left: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .corner-gif {
+        width: 45px;
+    }
+    .top-left {
+        top: 5px;
+        left: 5px;
+    }
+    .top-right {
+        top: 5px;
+        right: 5px;
+    }
+    .bottom-left {
+        bottom: 5px;
+        left: 5px;
+    }
+    .bottom-right {
+        bottom: 5px;
+        right: 5px;
+    }
+    .top-left-cat {
+        width: 45px;
+        top: 5px;
+        left: 55px;
+        right: auto;
+    }
+    .top-right-cat {
+        width: 45px;
+        top: 5px;
+        right: 55px;
+        left: auto;
+    }
+    .bottom-left-cat {
+        width: 45px;
+        bottom: 5px;
+        left: 55px;
+        right: auto;
+    }
+    .bottom-right-cat {
+        width: 45px;
+        bottom: 5px;
+        right: 55px;
+        left: auto;
+    }
+}
