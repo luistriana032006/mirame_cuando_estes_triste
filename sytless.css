@@ -261,6 +261,18 @@ body {
   right: 180px; /* Al lado de la nutria inferior derecha */
 }
 
+.new-text-card {
+    background-color: #ff69b4; /* Rosa fuerte para la tarjeta */
+}
+
+.new-text {
+    color: #fff;
+    font-size: 1.1em;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+
 /* Media queries para hacer la página responsive */
 @media (max-width: 768px) {
     .corner-gif {
